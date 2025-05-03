@@ -4,36 +4,83 @@
     box-sizing: border-box; /**/
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-.navbar{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #002244;
-    padding: 1rem 2rem;
-    color: white;
-    position:fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #002244;
+  padding: 1rem 2rem;
+  color: white;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
 }
-.logo{
-    font-size: 1.5rem;
-    font-weight: bold;
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
 }
-.nav-links{
-    display: flex;
-    list-style: none;
-    gap: 2rem;
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
 }
-.nav-links li a{
-    color: white;
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s ease;
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
 }
-.nav-links li a:hover{
-    color: #00ccff;;
+
+.nav-links li a:hover {
+  color: #00ccff;
 }
+
+/* إضافة زر القائمة للموبايل */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+/* تعديل التنسيق للموبايل */
+@media (max-width: 768px) {
+  .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 1rem;
+  }
+
+  .nav-links {
+      display: none; /* إخفاء الروابط في البداية */
+      flex-direction: column;
+      gap: 1rem;
+      margin-top: 1rem;
+      width: 100%;
+  }
+
+  .nav-links.active {
+      display: flex; /* إظهار الروابط عند تفعيل القائمة */
+  }
+
+  .nav-links li a {
+      padding: 0.5rem 1rem;
+      width: 100%;
+      text-align: center;
+  }
+
+  .menu-toggle {
+      display: block; /* إظهار زر القائمة */
+  }
+}
+
+
 /* Hero Section */
 .hero{
     background-color: #f5f7fa;
@@ -325,3 +372,4 @@ footer .footer-bottom {
     font-size: 0.85rem;
     color: #cccccc;
 }
+
