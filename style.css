@@ -1,0 +1,327 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /**/
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #002244;
+    padding: 1rem 2rem;
+    color: white;
+    position:fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+.logo{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.nav-links{
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+.nav-links li a{
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+.nav-links li a:hover{
+    color: #00ccff;;
+}
+/* Hero Section */
+.hero{
+    background-color: #f5f7fa;
+    text-align: center;
+    padding: 8rem 2rem 4rem ;
+}
+.hero h1{
+    font-size: 2.5rem;
+    color: #002244;
+    margin-bottom: 1rem;
+}
+.hero p {
+    font-size: 1.1rem;
+    color: #333;
+    max-width: 600px;
+    margin: 0 auto 2rem;
+  }
+  .btn-primary{
+    background-color: #0077b6;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  .btn-primary:hover{
+    background-color: #005f8e;
+  }
+
+  /* Services Section */
+
+  .services{
+    padding: 4rem 2rem;
+    background-color: #ffffff;
+    text-align: center;
+  }
+  .services h2{
+    font-size: 2rem ;
+    margin-bottom: 2rem ;
+    color: #002244;;
+  }
+  .service-cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .card{
+    background-color: #f0f4f8;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); 
+    transition: transform 0.3s ease ;
+  }
+  .card:hover{
+    transform: translateY(-5px);
+  }
+  .card h3 {
+    color: #005f8e;
+    margin-bottom: 1rem;
+  }
+  .card p {
+    color: #333;
+    font-size: 0.95rem;
+  }
+   /*Features Section*/
+  .features{
+    padding: 4rem 2rem ;
+    align-items: center;
+    background-color:  #f9fafb;
+    text-align: center;
+  }
+  .features h2{
+    font-size: 2rem;
+    margin-bottom: 2.5rem;
+    color:  #002244;
+  }
+  .feature-boxes{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+    gap: 2rem;
+    /*display: flex;*/
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .feature{
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+  }
+  .feature:hover {
+    transform: translateY(-5px);
+  }
+  .feature i {
+    font-size: 2rem ;
+    margin-bottom: 1rem ;
+    color: #0077cc;;
+  }
+  .feature p {
+    color: #555;
+    font-size: 0.95rem;
+  }
+  /*Testimonials Section*/
+  .testimonials {
+    background-color: #f2f6f9;
+    padding: 4rem 2rem;
+    text-align: center;
+  }
+  
+  .testimonials h2 {
+    font-size: 2rem;
+    color: #002244;
+    margin-bottom: 3rem;
+  }
+  
+  .testimonial-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  .testimonial {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+  }
+  
+  .testimonial:hover {
+    transform: translateY(-5px);
+  }
+  
+  .testimonial p {
+    font-style: italic;
+    color: #333;
+    margin-bottom: 1rem;
+  }
+  
+  .testimonial h4 {
+    color: #0077cc;
+    font-weight: bold;
+  }
+/*Download Section*/
+  #download {
+    padding: 4rem 2rem;
+    background-color: #f9fafb;
+    text-align: center;
+}
+
+#download h2 {
+    font-size: 2rem;
+    color: #002244;
+    margin-bottom: 1rem;
+}
+
+#download p {
+    color: #555;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+}
+
+.download-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.download-btn {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    color: #333;
+    width: 220px;
+    transition: transform 0.3s ease;
+}
+
+.download-btn img {
+    width: 40px;
+    height: 40px;
+    margin-right: 1rem;
+}
+
+.download-btn:hover {
+    transform: scale(1.05);
+}
+
+.app-store {
+    background-color: #0070c9;
+    color: white;
+}
+
+.google-play {
+    background-color: #34b7f1;
+    color: white;
+}
+/*Contact us*/
+.contact-us-section {
+    background-color: #f9fafb;
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.contact-us-section h2 {
+    font-size: 2rem;
+    color: #002244;
+    margin-bottom: 1rem;
+}
+
+.contact-us-section p {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+.contact-us-section .contact-link {
+    display: inline-block;
+    font-size: 1.1rem;
+    background-color: #27ae60;
+    color: #fff;
+    padding: 0.8rem 2rem;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.contact-us-section .contact-link:hover {
+    background-color: #1f8e4d;
+}
+/*footer*/
+footer {
+    background-color: #002244;
+    color: #ffffff;
+    padding: 2rem;
+    text-align: center;
+}
+
+footer .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+footer .footer-content .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #27ae60;
+}
+
+footer .footer-content .social-icons a {
+    color: #ffffff;
+    font-size: 1.5rem;
+    margin: 0 10px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer .footer-content .social-icons a:hover {
+    color: #27ae60;
+}
+
+footer .footer-content .links a {
+    color: #ffffff;
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+}
+
+footer .footer-content .links a:hover {
+    color: #27ae60;
+}
+
+footer .footer-bottom {
+    margin-top: 1.5rem;
+    font-size: 0.85rem;
+    color: #cccccc;
+}
