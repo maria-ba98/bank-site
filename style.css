@@ -16,11 +16,10 @@
   top: 0;
   z-index: 1000;
 }
-
-.logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-}
+   .logo img {
+         height: 80px; 
+         display: block;
+        }
 
 .nav-links {
   display: flex;
@@ -41,14 +40,24 @@
 
 /* إضافة زر القائمة للموبايل */
 .menu-toggle {
-  display: none;
-  background: none;
+  font-size: 30px; 
+  background: transparent;
   border: none;
-  color: white;
-  font-size: 2rem;
-  cursor: pointer;
+  color: #fff; 
+  position: fixed; /* وضع الزر في مكان ثابت */
+  top: 20px; 
+  right: 20px; 
+  z-index: 1000; /* التأكد من أن الزر في الواجهة */
+  cursor: pointer; /* تغيير شكل المؤشر عند المرور على الزر */
 }
-
+.menu-toggle:hover {
+  color: #ccc; /* تغيير اللون عند التمرير على الزر */
+}
+@media screen and (min-width: 768px) {
+  .menu-toggle {
+      display: none;
+  }
+}
 /* تعديل التنسيق للموبايل */
 @media (max-width: 768px) {
   .navbar {
@@ -121,7 +130,7 @@
   .services h2{
     font-size: 2rem ;
     margin-bottom: 2rem ;
-    color: #002244;;
+    color: #002244;
   }
   .service-cards{
     display: grid;
@@ -289,87 +298,186 @@
 }
 /*Contact us*/
 .contact-us-section {
-    background-color: #f9fafb;
-    padding: 4rem 2rem;
-    text-align: center;
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+  text-align: center;
 }
 
-.contact-us-section h2 {
-    font-size: 2rem;
-    color: #002244;
-    margin-bottom: 1rem;
+/* Contact Section Title */
+.contact-us-content h2 {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 20px;
 }
 
-.contact-us-section p {
-    font-size: 1rem;
-    color: #333;
-    margin-bottom: 1.5rem;
+/* Contact Section Description */
+.contact-us-content p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 30px;
 }
 
-.contact-us-section .contact-link {
-    display: inline-block;
-    font-size: 1.1rem;
-    background-color: #27ae60;
-    color: #fff;
-    padding: 0.8rem 2rem;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
+/* Button Styling */
+.btn-show-form {
+  padding: 12px 25px;
+  background-color: #007bff; /* Blue color */
+  color: white;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
 }
 
-.contact-us-section .contact-link:hover {
-    background-color: #1f8e4d;
+.btn-show-form:hover {
+  background-color: #0056b3;
+}
+
+/* Styling for the Contact Form */
+.contact-form {
+  display: none; /* Initially hidden */
+  max-width: 600px;
+  width: 100%; /* Full width with max-width to ensure responsiveness */
+  margin: 20px auto; /* Centered horizontally with auto margins */
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.contact-form label {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.contact-form textarea {
+  resize: vertical;
+  height: 150px;
+}
+
+/* Submit Button Styling */
+.contact-form button {
+  padding: 12px 20px;
+  background-color: #007bff; /* Same color as Contact Us button */
+  color: white;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #0056b3;
 }
 /*footer*/
 footer {
-    background-color: #002244;
-    color: #ffffff;
-    padding: 2rem;
-    text-align: center;
+  background-color: #002244;
+  color: #ffffff;
+  padding: 2rem;
+  text-align: center;
 }
 
 footer .footer-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
 }
 
 footer .footer-content .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #27ae60;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ffffff;
+}
+.social-icons {
+  display: flex;
+  justify-content: flex-start; 
+  gap: 15px; 
+      padding-left: 150px;
 }
 
 footer .footer-content .social-icons a {
-    color: #ffffff;
-    font-size: 1.5rem;
-    margin: 0 10px;
-    text-decoration: none;
-    transition: color 0.3s ease;
+  color: #ffffff;
+  font-size: 1.5rem;
+  margin: 0 10px;
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
 footer .footer-content .social-icons a:hover {
-    color: #27ae60;
+  color: #27ae60;
 }
 
 footer .footer-content .links a {
-    color: #ffffff;
-    margin: 0 15px;
-    text-decoration: none;
-    font-size: 0.95rem;
-    transition: color 0.3s ease;
+  color: #ffffff;
+  margin: 0 15px;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
 }
 
 footer .footer-content .links a:hover {
-    color: #27ae60;
+  color: #27ae60;
 }
 
 footer .footer-bottom {
-    margin-top: 1.5rem;
-    font-size: 0.85rem;
-    color: #cccccc;
+  margin-top: 1.5rem;
+  font-size: 0.85rem;
+  color: #cccccc;
 }
 
+
+/* Responsive Styling for Small Screens */
+@media screen and (max-width: 600px) {
+  .contact-us-section {
+    padding: 20px 10px;
+}
+.contact-us-content h2 {
+    font-size: 24px;
+}
+.btn-show-form {
+    padding: 10px 20px;
+    font-size: 14px;
+}
+.contact-form {
+    padding: 15px;
+}
+.contact-form input,
+.contact-form textarea {
+    font-size: 14px;
+}
+.contact-form button {
+    padding: 10px 18px;
+}
+footer .footer-content {
+  flex-direction: column;
+  align-items: center;
+}
+
+footer .footer-content .social-icons {
+  order: -1; /* تغيير ترتيب ظهور روابط التواصل الاجتماعي */
+  margin-bottom: 1rem; 
+}
+
+footer .footer-content .links {
+  text-align: center;
+}
+.social-icons {
+  padding-left:2px;
+}}
