@@ -257,7 +257,10 @@
     font-size: 1rem;
     margin-bottom: 2rem;
 }
-
+.google  {
+ 
+  font-size: 1.5rem;
+}
 .download-buttons {
     display: flex;
     justify-content: center;
